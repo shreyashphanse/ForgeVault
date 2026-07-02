@@ -80,7 +80,11 @@ exports.createApp = async (req, res) => {
       apkSize: `${(req.files.apk[0].size / (1024 * 1024)).toFixed(2)} MB`,
     });
 
+    console.time("Mongo Save");
+
     await newApp.save();
+
+    console.timeEnd("Mongo Save");
 
     res.status(201).json({
       success: true,
