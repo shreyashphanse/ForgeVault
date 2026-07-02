@@ -6,6 +6,7 @@ import AdminLogin from "./pages/AdminLogin";
 import Dashboard from "./pages/Dashboard";
 import UploadApp from "./pages/UploadApp";
 import EditApp from "./pages/EditApp";
+import Health from "./pages/Health";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Route path="/admin/upload" element={<UploadApp />} />
 
       <Route path="/admin/edit/:id" element={<EditApp />} />
+
+      <Route path="/health" element={<Health />} />
     </Routes>
   );
 }
