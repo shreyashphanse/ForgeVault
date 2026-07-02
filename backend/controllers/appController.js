@@ -28,6 +28,24 @@ exports.getAppBySlug = async (req, res) => {
   }
 };
 
+exports.getAppById = async (req, res) => {
+  try {
+    const app = await App.findById(req.params.id);
+
+    if (!app) {
+      return res.status(404).json({
+        message: "Application not found",
+      });
+    }
+
+    res.status(200).json(app);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
+
 // Upload App
 exports.createApp = async (req, res) => {
   try {
@@ -55,8 +73,11 @@ exports.createApp = async (req, res) => {
       releaseNotes,
       version,
       github,
+
       logo: req.files.logo[0].filename,
       apk: req.files.apk[0].filename,
+
+      apkSize: `${(req.files.apk[0].size / (1024 * 1024)).toFixed(2)} MB`,
     });
 
     await newApp.save();
@@ -104,9 +125,12 @@ exports.updateApp = async (req, res) => {
       }
 
       app.apk = req.files.apk[0].filename;
+
+      app.apkSize = `${(req.files.apk[0].size / (1024 * 1024)).toFixed(2)} MB`;
     }
 
     Object.assign(app, req.body);
+    app.lastUpdated = new Date();
 
     if (req.body.features) {
       app.features = JSON.parse(req.body.features);
@@ -159,6 +183,34 @@ exports.deleteApp = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Application deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// Increment Download Count
+exports.incrementDownloads = async (req, res) => {
+  try {
+    const app = await App.findById(req.params.id);
+
+    if (!app) {
+      return res.status(404).json({
+        success: false,
+        message: "Application not found",
+      });
+    }
+
+    app.downloads += 1;
+
+    await app.save();
+
+    res.status(200).json({
+      success: true,
+      downloads: app.downloads,
     });
   } catch (error) {
     res.status(500).json({

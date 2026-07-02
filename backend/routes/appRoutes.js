@@ -4,15 +4,22 @@ const router = express.Router();
 const {
   getAllApps,
   getAppBySlug,
+  getAppById,
   createApp,
   updateApp,
   deleteApp,
+  incrementDownloads,
 } = require("../controllers/appController");
 
 const upload = require("../middleware/uploadMiddleware");
 const authenticateAdmin = require("../middleware/authMiddleware");
 
 router.get("/", getAllApps);
+
+// IMPORTANT: More specific routes first
+router.get("/id/:id", getAppById);
+
+router.patch("/download/:id", incrementDownloads);
 
 router.get("/:slug", getAppBySlug);
 

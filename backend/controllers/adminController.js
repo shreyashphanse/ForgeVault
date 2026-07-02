@@ -1,3 +1,6 @@
+const crypto = require("crypto");
+const sessions = require("../utils/sessionStore");
+
 exports.login = (req, res) => {
   const { password } = req.body;
 
@@ -15,8 +18,36 @@ exports.login = (req, res) => {
     });
   }
 
-  return res.status(200).json({
+  const token = crypto.randomBytes(32).toString("hex");
+
+  sessions.add(token);
+
+  res.status(200).json({
     success: true,
-    message: "Login successful",
+    token,
+  });
+};
+
+exports.verifySession = (req, res) => {
+  const token = req.headers.authorization;
+
+  if (!token || !sessions.has(token)) {
+    return res.status(401).json({
+      success: false,
+    });
+  }
+
+  res.json({
+    success: true,
+  });
+};
+
+exports.logout = (req, res) => {
+  const token = req.headers.authorization;
+
+  sessions.delete(token);
+
+  res.json({
+    success: true,
   });
 };

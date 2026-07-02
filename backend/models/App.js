@@ -55,6 +55,21 @@ const appSchema = new mongoose.Schema(
       trim: true,
     },
 
+    apkSize: {
+      type: String,
+      default: "",
+    },
+
+    downloads: {
+      type: Number,
+      default: 0,
+    },
+
+    lastUpdated: {
+      type: Date,
+      default: Date.now,
+    },
+
     version: {
       type: String,
       default: "1.0.0",
