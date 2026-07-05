@@ -1,97 +1,45 @@
-# ForgeVault
+# 📦 ForgeVault
 
-```{=html}
-<p align="center">
-```
-
-`<img src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=white" />`{=html}
-`<img src="https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js&logoColor=white" />`{=html}
-`<img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white" />`{=html}
-`<img src="https://img.shields.io/badge/Status-Live-success" />`{=html}
-
-```{=html}
-</p>
-```
-
-```{=html}
-<p align="center">
-```
-
-`<b>`{=html}A Modern Android Application
-Repository`</b>`{=html}`<br>`{=html} Publish, manage and distribute
-Android applications through a clean full stack platform.
-
-```{=html}
-</p>
-```
-
-## 🌐 Live Demo
-
-**Website:** https://forgevault-1anm.onrender.com
+ForgeVault is a full-stack Android application repository that allows developers to publish, manage, and distribute Android applications through a modern web platform. It provides a dedicated application page for every app where users can explore features, permissions, release notes, version information, and securely download APK files. Along with a public-facing application store, ForgeVault also includes a secure administrator dashboard for uploading and managing applications.
 
 ---
 
-# 📖 Overview
+## 📱 Features
 
-### XYZ Format
+### Public Website
 
-- **Accomplished** the development of **ForgeVault**, a full stack
-  Android application repository that allows publishing, managing and
-  distributing Android applications from a centralized platform.
-- **Built** a secure admin dashboard with JWT authentication, APK/logo
-  uploads, CRUD operations and automatic download tracking.
-- **Improved** project deployment by integrating React, Express,
-  MongoDB Atlas and Render into a production ready application
-  showcasing modern full stack development practices.
+- 🌐 Modern responsive landing page
+- 📦 Browse published Android applications
+- 📄 Dedicated application details page
+- 📥 Direct APK download support
+- 📊 Automatic download counter
+- 📏 Automatic APK size display
+- 🏷 Category management
+- 📝 Release notes support
+- ⭐ Feature listing
+- 🔐 Permission listing
+- ⏳ Loading animations
+- 📭 Empty state support
+- ❌ Custom 404 page
+- ❤️ Health check endpoint
 
-ForgeVault replaces scattered APK sharing methods with a professional
-application portal where every application has its own dedicated page
-containing detailed descriptions, version information, release notes,
-permissions, features and direct APK downloads.
+### Admin Dashboard
 
----
-
-# ✨ Features
-
-## Public Website
-
-- Responsive landing page
-- Modern minimal UI
-- Animated application cards
-- Dedicated application pages
-- APK downloads
-- GitHub repository links
-- Download counter
-- Version information
-- APK size display
-- Category display
-- Release notes
-- Feature listing
-- Permission listing
-- Loading states
-- Empty state
-- Custom 404 page
-- Health endpoint
-
-## Admin Dashboard
-
-- Secure administrator login
-- JWT authentication
-- Upload new applications
-- Upload logos
-- Upload APK files
-- Edit applications
-- Delete applications
-- Automatic slug generation
-- Automatic APK size calculation
-- Comma separated feature input
-- Comma separated permission input
+- 🔐 Secure JWT Authentication
+- 📤 Upload APK files
+- 🖼 Upload application logos
+- ✏️ Edit applications
+- 🗑 Delete applications
+- 🔄 Automatic slug generation
+- 📏 Automatic APK size calculation
+- 📝 Comma-separated feature input
+- 🔑 Comma-separated permission input
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
+### Frontend
 
 - React
 - Vite
@@ -102,220 +50,186 @@ permissions, features and direct APK downloads.
 - React Icons
 - CSS3
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
+- MongoDB Atlas
+- Mongoose
 - Multer
 - JWT Authentication
-- Mongoose
 
-## Database
+### Deployment
 
+- Render (Frontend)
+- Render (Backend)
 - MongoDB Atlas
-
-## Deployment
-
-- Render Static Site
-- Render Web Service
 
 ---
 
-# 📂 Folder Structure
+## 📂 Project Structure
 
 ```text
-ForgeVault
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── middleware
-│   ├── models
-│   ├── routes
-│   ├── storage
-│   │   ├── apks
-│   │   └── logos
-│   ├── .env
-│   ├── package.json
+ForgeVault/
+│
+├── frontend/              # React Frontend
+│
+├── backend/               # Express Backend API
+│
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── storage/
+│   │   ├── apks/
+│   │   └── logos/
 │   └── server.js
 │
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── styles
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── .env
-│   ├── package.json
-│   └── vite.config.js
-│
-├── .gitignore
 └── README.md
 ```
 
 ---
 
-# 🔄 Application Workflow
+## 🚀 Project Overview (XYZ Format)
 
-```text
-Administrator Login
-        │
-        ▼
-JWT Authentication
-        │
-        ▼
-Upload Logo + APK
-        │
-        ▼
-Multer Processes Files
-        │
-        ▼
-MongoDB Stores Metadata
-        │
-        ▼
-Applications Listed on Homepage
-        │
-        ▼
-User Opens Application Page
-        │
-        ▼
-Views Details
- • Description
- • Features
- • Permissions
- • Version
- • Release Notes
- • APK Size
- • Downloads
-        │
-        ▼
-Download APK
-        │
-        ▼
-Download Counter Updated
-```
+- **Developed** a full-stack Android application repository that enables developers to publish and distribute Android applications through a centralized web platform.
+- **Implemented** secure administrator authentication, complete CRUD functionality, APK and logo uploads, download tracking, and automatic APK size calculation using modern web technologies.
+- **Demonstrated** practical experience in full-stack development, REST API design, authentication, cloud deployment, database management, file handling, and responsive UI development.
 
 ---
 
-# 🔒 Security
+## ⚙️ Installation
 
-- JWT based administrator authentication
-- Protected admin routes
-- File validation
-- APK validation
-- Image validation
-- Environment variables
-- MongoDB Atlas cloud database
-
----
-
-# 🚀 Installation
-
-## Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/shreyashphanse/ForgeVault.git
 ```
 
-## Install Backend
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
 
 ```bash
 cd backend
 npm install
-```
-
-## Install Frontend
-
-```bash
-cd ../frontend
-npm install
-```
-
-## Start Backend
-
-```bash
-npm run dev
-```
-
-## Start Frontend
-
-```bash
 npm run dev
 ```
 
 ---
 
-# ⚙ Environment Variables
+## 🌐 Environment Variables
 
-## Backend
+### Backend
+
+Create a `.env` file inside the backend folder.
 
 ```env
-MONGO_URI=
-JWT_SECRET=
-ADMIN_USERNAME=
-ADMIN_PASSWORD=
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+ADMIN_USERNAME=your_admin_username
+ADMIN_PASSWORD=your_admin_password
+PORT=5000
 ```
 
-## Frontend
+### Frontend
+
+Create a `.env` file inside the frontend folder.
 
 ```env
-VITE_API_URL=
+VITE_API_URL=http://localhost:5000/api
 ```
 
 ---
 
-# 🎯 Future Improvements
+## 🔄 Application Workflow
 
-- Screenshot gallery
+1. Administrator logs into the dashboard.
+2. JWT authentication verifies administrator credentials.
+3. Administrator uploads the application logo and APK file.
+4. Multer validates and stores uploaded files.
+5. Application details are stored in MongoDB Atlas.
+6. Published applications automatically appear on the homepage.
+7. Users browse available applications.
+8. Users open an application's dedicated page.
+9. Users can view:
+   - Description
+   - Features
+   - Permissions
+   - Version
+   - Release Notes
+   - APK Size
+   - Download Count
+10. Users download the APK.
+11. Download statistics are automatically updated.
+
+---
+
+## 🔒 Security
+
+- JWT based administrator authentication
+- Protected administrator routes
+- Secure REST APIs
+- File type validation
+- APK validation
+- Image validation
+- Environment variable configuration
+- MongoDB Atlas cloud database
+
+---
+
+## 🌍 Live Demo
+
+**Website**
+
+https://forgevault-1anm.onrender.com
+
+---
+
+## 🔮 Future Improvements
+
+- Application screenshot gallery
 - Search functionality
 - Category filters
 - Version history
-- Download analytics
-- Cloud storage for APKs
-- User ratings
+- Download analytics dashboard
+- Cloud storage integration
+- User ratings and reviews
 - Changelog timeline
+- Multiple application categories
+- Advanced admin analytics
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Developer
 
-```{=html}
-<p align="center">
-```
+**Shreyash Phanse**
 
-`<a href="https://github.com/shreyashphanse">`{=html}
-`<img src="https://img.shields.io/badge/🐙%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>`{=html}
-`</a>`{=html}
+B.Sc. Computer Science
 
-`<a href="https://www.linkedin.com/in/shreyashphanse">`{=html}
-`<img src="https://img.shields.io/badge/💼%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>`{=html}
-`</a>`{=html}
+<p>
+<a href="https://github.com/shreyashphanse">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-`<a href="https://portfolio-frontend-nogx.onrender.com">`{=html}
-`<img src="https://img.shields.io/badge/🌐%20Portfolio-6B8E23?style=for-the-badge"/>`{=html}
-`</a>`{=html}
+<a href="https://www.linkedin.com/in/shreyashphanse">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
-```{=html}
+<a href="https://portfolio-frontend-nogx.onrender.com">
+<img src="https://img.shields.io/badge/Portfolio-6B8E23?style=for-the-badge"/>
+</a>
 </p>
-```
 
 ---
 
-# 📄 License
+## 📄 License
 
-This project is intended for educational, portfolio and personal Android
-application distribution purposes.
-
----
-
-```{=html}
-<p align="center">
-```
-
-⭐ If you found this project interesting, consider giving it a star.
-
-```{=html}
-</p>
-```
+This project is developed for educational purposes, portfolio showcase, and personal Android application distribution.
