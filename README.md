@@ -91,7 +91,7 @@ ForgeVault/
 
 ---
 
-## 🚀 Project Overview (XYZ Format)
+## 🚀 Project Overview
 
 - **Developed** a full-stack Android application repository that enables developers to publish and distribute Android applications through a centralized web platform.
 - **Implemented** secure administrator authentication, complete CRUD functionality, APK and logo uploads, download tracking, and automatic APK size calculation using modern web technologies.
